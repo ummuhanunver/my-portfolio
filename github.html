@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Klonu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      background-color: #202020;
+      color: white;
+      z-index: 1000;
+    }
+    .sidebar {
+      position: fixed;
+      top: 50px;
+      left: 0;
+      width: 200px;
+      height: calc(100vh - 50px);
+      background-color: #f1f1f1;
+      padding-top: 20px;
+    }
+    .sidebar div {
+      padding: 12px 20px;
+      cursor: pointer;
+      font-weight: bold;
+      color: black;
+    }
+    .sidebar div:hover {
+      background-color: white;
+    }
+    .main {
+      margin-left: 200px;
+      padding-top: 70px;
+      padding: 70px 20px 20px 220px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .video {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .video:hover {
+      transform: scale(1.03);
+    }
+    .thumbnail {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+    .video-info {
+      display: flex;
+      padding: 10px;
+    }
+    .video-info img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .video-text {
+      font-size: 14px;
+    }
+    .video-text h4 {
+      margin: 0 0 5px 0;
+      font-size: 16px;
+    }
+    .video-text p {
+      margin: 0;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div><strong>UTube</strong></div>
+    <div>Ara | Bildirimler | Profil</div>
+  </div>
+
+  <div class="sidebar">
+    <div> Anasayfa</div>
+    <div> Keşfet</div>
+    <div> Abonelikler</div>
+    <div> Kitaplık</div>
+  </div>
+
+  <div class="main">
+    <div class="video">
+      <img class="thumbnail" src="https://source.unsplash.com/400x150/?technology" alt="Video Thumbnail">
+      <div class="video-info">
+        <img src="https://source.unsplash.com/40x40/?person" alt="Kanal">
+        <div class="video-text">
+          <h4>HTML/CSS </h4>
+          <p>Ümmühan Ünver</p>
+          <p>12 bin görüntüleme • 1 gün önce</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video">
+      <img class="thumbnail" src="https://source.unsplash.com/400x150/?coding" alt="Video Thumbnail">
+      <div class="video-info">
+        <img src="https://source.unsplash.com/40x40/?avatar" alt="Kanal">
+        <div class="video-text">
+          <h4>Tasarım</h4>
+          <p>Üni Kodcu</p>
+          <p>8 bin görüntüleme • 3 gün önce</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="video">
+      <img class="thumbnail" src="https://source.unsplash.com/400x150/?webdesign" alt="Video Thumbnail">
+      <div class="video-info">
+        <img src="https://source.unsplash.com/40x40/?developer" alt="Kanal">
+        <div class="video-text">
+          <h4>Position ve Layout</h4>
+          <p>WebLab</p>
+          <p>15 bin görüntüleme • 1 hafta önce</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
